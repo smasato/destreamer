@@ -132,6 +132,7 @@ async function downloadVideo(videoGUIDs: Array<string>, outputDirectories: Array
         videos.forEach((video: Video) => {
             logger.info(
                 '\nTitle:          '.green + video.title +
+                '\nDuration:       '.green + Array.from(video.duration.split('.'), x => x.padStart(2, "0")).join(':') +
                 '\nOutPath:        '.green + video.outPath +
                 '\nPublished Date: '.green + video.publishDate +
                 '\nPlayback URL:   '.green + video.playbackUrl +
